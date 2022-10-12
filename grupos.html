@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do mundo</title>
+</head>
+<body>
+
+    <h4>Participantes</h4>
+    <ul id="paises"></ul>
+    <script>
+        const url = "https://estagio.geopostenergy.com/WorldCup/GetAllTeams" ;
+        const ul = document.getElementById("paises");
+
+        function createnode(element){
+            return document.createElement(element);
+        }
+        function append(parent,el) {
+            return parent.appendChild(el);
+        }
+
+        fetch(url,
+        {
+            method: 'get',
+            headers: {'git-user': 'joaomgsa'}
+        })
+
+        .then(response => response.json())
+        .then(function (data){
+            let paises = data.Result;
+            return paises.map(function(pais){
+                let li = createnode('li');
+                let span = createnode('span');
+                span.innerHTML = `${pais.Name}`;
+                append(li,span);
+                append(ul,li);
+            })
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+        
+        
+
+    </script>
+</body>
+</html>

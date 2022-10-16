@@ -11,6 +11,9 @@ export default function Navbar() {
             <Nav.Link href="/home">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>
+            <Nav.Link href="/sorteio">Sorteio</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
             <Nav.Link href="/grupos">Grupos</Nav.Link>
             </Nav.Item>
             <Nav.Item>

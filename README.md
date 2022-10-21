@@ -1,6 +1,6 @@
 
 
-## 1- Consumir api seleções
+## 1- Consumir api seleções - Feito
 
 ## 2- Separar duas seleções em grupos
 
